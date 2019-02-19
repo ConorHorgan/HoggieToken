@@ -7,27 +7,22 @@ contract HoggieToken {
 	string public symbol =  "HOGGIE";
 	//Standard
 	string public standard =  "Hoggie Coin v1.0";
-	// Constructor
-	// Set the total number of tokens
-	// Read the total number of tokens
 	uint256 public totalSupply;
 
-	event Transfer(
-	address indexed _from,
-	address indexed _to,
-	uint256 _value
-	);
+event Transfer(
+        address indexed _from,
+        address indexed _to,
+        uint256 _value
+    );
 
-	// Approval
-	event Approval(
-		address indexed _owner,
-		address indexed _spender,
-		uint256 _value
-	);
+    event Approval(
+        address indexed _owner,
+        address indexed _spender,
+        uint256 _value
+    );
 
-	mapping(address => uint256) public balanceOf;
-	// Allowance
-	mapping(address => mapping(address => uint256)) public allowance;
+    mapping(address => uint256) public balanceOf;
+    mapping(address => mapping(address => uint256)) public allowance;
 
 	constructor(uint256 _initialSupply) public {
 		//allocate the initial supply
@@ -35,47 +30,36 @@ contract HoggieToken {
 		totalSupply = _initialSupply;
 	}
 
-	//Transfer
 	function transfer(address _to, uint256 _value) public returns (bool success) {
-		//Exception if account doesn't have enough
-		require(balanceOf[msg.sender] >= _value);
-		//Transfer the balance
-		balanceOf[msg.sender] -= _value;
-		balanceOf[_to] += _value;
+        require(balanceOf[msg.sender] >= _value);
 
-		emit Transfer(msg.sender, _to, _value);
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
 
-		return true;
-		//Return a boolean
-		//Transfer Event
-	}
+       emit Transfer(msg.sender, _to, _value);
 
-	// Delegated Transfer
-	//Approval
-	function approve(address _spender, uint256 _value) public returns (bool success) {
-		// Allowance
-		allowance[msg.sender][_spender] = _value;
+        return true;
+    }
 
-		//Approval event
-		emit Approval(msg.sender, _spender, _value);
+    function approve(address _spender, uint256 _value) public returns (bool success) {
+        allowance[msg.sender][_spender] = _value;
 
-		return true;
-	}
+       emit Approval(msg.sender, _spender, _value);
 
-	//Transfer From
-	 function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
-	 require(_value <= balanceOf[_from]);
-	 require(_value <= allowance[_from][msg.sender]);
-	 
-	 // change the balance
-	 balanceOf[_from] -= _value;
-	 balanceOf[_to] += _value;
+        return true;
+    }
 
-	 allowance[_from][msg.sender] -= _value;
-	 emit Transfer(_from, _to, _value);
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
+        require(_value <= balanceOf[_from]);
+        require(_value <= allowance[_from][msg.sender]);
 
-	 return true;
+        balanceOf[_from] -= _value;
+        balanceOf[_to] += _value;
 
-	 }
+        allowance[_from][msg.sender] -= _value;
 
+       emit Transfer(_from, _to, _value);
+
+        return true;
+    }
 }

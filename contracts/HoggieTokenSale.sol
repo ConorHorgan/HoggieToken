@@ -3,7 +3,7 @@ pragma solidity ^0.5.1;
 import "./HoggieToken.sol";
 
 contract HoggieTokenSale {
-	address admin;
+	address payable admin;
 	HoggieToken public tokenContract;
 	uint256 public tokenPrice;
 	uint256 public tokensSold;
@@ -23,9 +23,9 @@ contract HoggieTokenSale {
 
 	// buy tokens
 	function buyTokens(uint256 _numberOfTokens) public payable {
-	require(msg.value == _numberOfTokens * tokenPrice);
-	require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);
-	require(tokenContract.transfer(msg.sender, _numberOfTokens));
+	require(msg.value == multiply(_numberOfTokens, tokenPrice));
+    require(tokenContract.balanceOf(address(this)) >= _numberOfTokens);
+    require(tokenContract.transfer(msg.sender, _numberOfTokens));
 
 
 	tokensSold += _numberOfTokens;
@@ -37,12 +37,11 @@ contract HoggieTokenSale {
 	}
 
 
-	// ending token HoggieTokenSale
-	function endSale() public {
-	// require admin
-	require(msg.sender == admin);
-	require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
-	selfdestruct(msg.sender);
+	 function endSale() public {
+        require(msg.sender == admin);
+        require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this))));
 
-	}
+        // Just transfer the balance to the admin
+        admin.transfer(address(this).balance);
+    }
 }
