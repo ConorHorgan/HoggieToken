@@ -47,6 +47,13 @@ module.exports = {
     port: 7545,            // Standard Ethereum port (default: none)
     network_id: "*",       // Any network (default: none)
     },
+    rinkeby: {
+      host: "localhost",
+      port: 8545,
+      from: "0x82cc928db889545ed0a189ff680ef3da7753e6b8",
+      network_id: 4,
+      gas: 4700000
+    }
 
     // Another network with more advanced options...
     // advanced: {
