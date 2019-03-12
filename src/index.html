@@ -1,14 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="https://www.favicon.cc/logo3d/138923.png" type="image/x-icon">
+<link rel="icon" href="https://www.favicon.cc/logo3d/138923.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hoggie Coin ICO Sale</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
+
+    <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+      <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/Theme Bootstrap/agency.min.css" rel="stylesheet">
+  
+  <style type="text/css">
+.bgimg {
+    background-image: url('http://acshub.co.uk/hubassets/uploads/2016/09/acs-website-background-building-e1472862899804.jpg');
+}
+
+.secimg {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/BZBMrpQIiq3lg4cl/videoblocks-ethereum-crypto-currency-white-background_rjd8nbshz_thumbnail-full01.png');
+    background-size: cover;
+}
+
+.conopa{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.celtics {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+}
+
+.img-fluid{max-width:100%;height:auto}
+
+.rounded-circle{border-radius:50%!important}
+
+.right{
+  float: right;
+  
+}
+.left{
+  float: left;
+  
+}
+
+.Colts{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+  height: 100px;
+}
+
+.Colts:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #fed136;
+}
+</style>
+</head>
+ <body id="page-top">
+
+  <ul class="celtics">
+  <li><a class="active right Colts" href="#home">Initial Coin Offering</a></li>
+  <li><a href="#about" class="right Colts">Instructions</a></li>
+  <li><a href="#" class="left Colts"><img style="height: 85%; margin-top: -4%;" src="/img/Logo.png"></a></li>
+</ul>
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text" style="padding-top:17%;">
+        <div class="intro-lead-in">Welcome To Hoggie Coin!</div>
+        <div class="intro-heading text-uppercase">An ERC-20 Token Sale On The Rinkeby Test Network</div>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section id="services" class="bgimg">
+    <div class="container">
+      <div class="row">
+      </div>
+      <div class="row text-center">
     <div class="container" style="width: 650px;">
       <div class="row">
         <div class="col-lg-12">
@@ -22,7 +119,8 @@
         <div id="content" class="text-center" style="display: none;">
           <p>
             Introducing "Hoggie Coin" (DAPP)!
-            Token price is <span class="token-price"></span> Ether. You currently have <span class="hoggie-balance"></span>&nbsp;DAPP.
+            Token price is <span class="token-price" style="color: #fed136;"></span> Ether. You currently have <span class="hoggie-balance" style="
+    color: #fed136;"></span>&nbsp;DAPP.
           </p>
           <br/>
           <form onSubmit="App.buyTokens(); return false" role="form">
@@ -44,9 +142,85 @@
           <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> tokens sold</p>
           <hr>
           <p id="accountAddress"></p>
+          <p>Warning! This token is deployed on the Rinkeby test network and built for educational purposes. You will not be able to purchase tokens with real ether.</p>
         </div>
       </div>
     </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="secimg" id="about">
+    <div class="container conopa">
+      <div class="row" style="padding-top: 5%;">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">How to interact with the ICO</h2>
+          <h3 class="section-subheading text-muted" style="color:#fff;">Follow the steps below <br />If the form does not detect that you have the Metamask chrome extension installed, the form will not load</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="https://pbs.twimg.com/profile_images/632786773366599681/VzI4uiQB_400x400.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Metamask</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="color:#fff;">To install Metamask, search for the Metamask Chrome plugin in the Google Chrome web store. Once you’ve installed it, be sure that it is checked in your list of extensions. You’ll see the fox icon in the top right hand side of your Chrome browser when it’s installed.</p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="https://blog.primablock.com/wp-content/uploads/2018/06/image6-292x300.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">  
+                  <h4 class="subheading">Rinkeby Test Network</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="color:#fff;">Is a parallel network to the ethereum mainnet. Therefore any transactions on this testnet has no effect on the mainnet and its ether. </br>In order to buy tokens from this ICO you will need to create an account on the Rinkeby testnet. <a href="https://gist.github.com/cryptogoth/10a98e8078cfd69f7ca892ddbdcf26bc">Click here for a tutorial on how to create an account</a> </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/faucet.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Rinkeby Faucet</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="color:#fff;">Once you have created an account you can request ether from the Rinkeby faucet<a href="https://faucet.rinkeby.io/"> here</a></p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img class="rounded-circle img-fluid" src="img/github.png" alt="">
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="subheading">Source Code</h4>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted" style="color:#fff;">If you would like to see the source code for this ICO visit my GitHub page <a href="https://github.com/ConorHorgan/HoggieToken"> here</a></p> </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -55,3 +229,12 @@
     <script src="js/app.js"></script>
   </body>
 </html>
+
+<!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="src/css/Bootstrap/agency.min.js"></script>
